@@ -1,10 +1,26 @@
+@import './assets/fonts/fonts.scss';
+@import './styles/variables';
+
 body {
   background-color: #f0f0f0;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-sf;
   margin: 0;
   padding: 0;
 }
 
 .app {
   background-color: #F1F2F3;
+  width: 100vmax;
+}
+
+.main {
+  display: flex;
+  margin-top: 30px;
+}
+
+.section {
+  min-width: 744px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }

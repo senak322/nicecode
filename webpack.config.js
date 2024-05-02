@@ -25,12 +25,26 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              modules: true,
               esModule: true,
+              modules: {
+                localIdentName: "[name]__[local]___[hash:base64:5]",
+              },
+              
             },
           },
           {
             loader: "sass-loader",
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|otf)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
           },
         ],
       },

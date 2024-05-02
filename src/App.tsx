@@ -1,16 +1,18 @@
 import React from "react";
 import Header from "./features/Header/Header";
 import NavBar from "./features/NavBar/NavBar";
-// import styles from "./App.module.scss";
+import UserInfo from "./features/UserInfo/UserInfo";
+// import styles from "./App.scss";
 const styles = require("./App.scss");
 
 const App: React.FC = () => {
   return (
     <div className={styles.app}>
       <Header />
-      <main>
+      <main className={styles.main}>
         <NavBar />
-        <section>
+        <section className={styles.section}>
+          <UserInfo />
           
         </section>
       </main>

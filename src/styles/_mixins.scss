@@ -1,0 +1,9 @@
+@mixin button($bgColor: blue, $color: white) {
+    background-color: $bgColor;
+    color: $color;
+    border: none;
+    border-radius: 4px;
+    padding: pxToRem(10px) pxToRem(20px);
+    text-transform: uppercase;
+    cursor: pointer;
+  }

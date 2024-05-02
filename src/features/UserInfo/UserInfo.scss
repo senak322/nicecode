@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.contaner {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: $box-shadow-main;
+  border-radius: $border-radius;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 0 0 6px;
+  color: $font-color-black;
+  font-size: 16px;
+  line-height: 20px;
+//   font-family: "SFProDisplay-Medium";
+}
+
+.about {
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.userContainer {
+  margin-left: 14px;
+  
+}
