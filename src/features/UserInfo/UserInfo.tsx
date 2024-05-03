@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { userAge, userName, userSex } from "../../utils/config";
 import userImage from "../../assets/images/user.png"; // Import the image
+import dots from "../../assets/images/dots.svg";
+import dotsHover from "../../assets/images/dotsWhite.svg";
+import BtnIcon from "../../components/BtnIcon/BtnIcon";
 const styles = require("./UserInfo.scss"); // Import the styles
 
 export default function UserInfo() {
+    const handleDots = useCallback(() => {
+        
+    }, []);
   return (
     <div className={styles.contaner}>
       <div className={styles.wrapper}>
@@ -15,7 +21,7 @@ export default function UserInfo() {
           </p>
         </div>
       </div>
-      <button className={styles.btn}>...</button>
+      <BtnIcon  imgMain={dots} imgHover={dotsHover} alt="Три точки" handleClick={handleDots}/>
     </div>
   );
 }
