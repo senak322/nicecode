@@ -7,12 +7,17 @@ import filter from "../../assets/images/filter.svg";
 import filterWhite from "../../assets/images/filterWhite.svg";
 import BtnIcon from "../../components/BtnIcon/BtnIcon";
 
+
 const styles = require("./NavBar.scss");
 
 export default function NavBar() {
   const [isSearch, setIsSearch] = useState(false);
   const hadleSearch = useCallback(() => {
     setIsSearch(true);
+  }, []);
+
+  const handleCloseSearch = useCallback(() => {
+    setIsSearch(false);
   }, []);
 
   const handleFilter = useCallback(() => {}, []);
@@ -33,6 +38,7 @@ export default function NavBar() {
                 imgHover={searchwhite}
                 alt="Лупа"
                 handleClick={hadleSearch}
+                isSearch={isSearch}
               />
               <input
                 className={styles.input}
@@ -49,13 +55,22 @@ export default function NavBar() {
               />
             )}
           </div>
-          {
-          <BtnIcon
-            imgMain={plus}
-            imgHover={plusWhite}
-            alt="Плюс"
-            handleClick={handlePlus}
-          />}
+          {!isSearch ? (
+            <BtnIcon
+              imgMain={plus}
+              imgHover={plusWhite}
+              alt="Плюс"
+              handleClick={handlePlus}
+            />
+          ) : (
+            <BtnIcon
+              imgMain={plus}
+              imgHover={plusWhite}
+              alt="Закрыть поиск"
+              handleClick={handleCloseSearch}
+              isSearch={isSearch}
+            />
+          )}
         </div>
       </div>
 

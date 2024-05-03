@@ -2,5 +2,10 @@
 
 .button {
     @include button();
-    
+
+}
+
+.lupe {
+    @include button();
+    background-color: white;
 }
