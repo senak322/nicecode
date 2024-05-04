@@ -11,6 +11,9 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".scss"],
   },
+  // experiments: {
+  //   asset: true,
+  // },
   module: {
     rules: [
       {
@@ -19,31 +22,35 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.css$/i, // Добавляем правило для .css файлов
+        use: ["style-loader", "css-loader"],
+      },
+
+      {
         test: /\.scss$/,
         use: [
-          { loader: "style-loader" },
+          "style-loader", // добавляет CSS в DOM через тег style
           {
-            loader: "css-loader",
+            loader: "css-loader", // переводит CSS в CommonJS
             options: {
-              esModule: true,
               modules: {
                 localIdentName: "[name]__[local]___[hash:base64:5]",
               },
-              
             },
-          },
-          {
-            loader: "sass-loader",
-          },
+          }, // добавляет CSS в DOM через тег style
+          "postcss-loader", // PostCSS магия
+          "sass-loader", // компилирует SASS в CSS
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|otf)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[path][name].[ext]',
+              name: "[name].[ext]",
+              outputPath: "images",
+              publicPath: "images",
             },
           },
         ],
@@ -61,5 +68,6 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+    hot: true,
   },
 };

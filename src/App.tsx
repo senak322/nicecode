@@ -1,7 +1,10 @@
 import React from "react";
 import Header from "./features/Header/Header";
-import NavBar from "./features/NavBar/NavBar";
+import UsersList from "./features/UsersList/UsersList";
 import UserInfo from "./features/UserInfo/UserInfo";
+import NavBar from "./features/NavBar/NavBar";
+import { Route, Routes } from "react-router-dom";
+import AddBtn from "./components/AddBtn/AddBtn";
 // import styles from "./App.scss";
 const styles = require("./App.scss");
 
@@ -10,10 +13,19 @@ const App: React.FC = () => {
     <div className={styles.app}>
       <Header />
       <main className={styles.main}>
-        <NavBar />
+        <UsersList />
         <section className={styles.section}>
           <UserInfo />
-          
+          <div>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<div>Заметки</div>} />
+              <Route path="/consult" element={<div>Консультации</div>} />
+              <Route path="/video" element={<div>Видео</div>} />
+              <Route path="/events" element={<div>Мероприятия</div>} />
+            </Routes>
+            <AddBtn />
+          </div>
         </section>
       </main>
     </div>

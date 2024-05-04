@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+    border: none;
+    background: transparent;
+}
+
+.container {
+    border-radius: 50%;
+    border: 1px solid $text-btn-normal;
+    width: 26px;
+    height: 26px;
+    @include flexCenter();
+}

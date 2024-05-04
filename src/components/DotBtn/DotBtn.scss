@@ -1,0 +1,48 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.button {
+  @include button();
+  background-color: white;
+  position: relative;
+  // background-image: url("../../assets/images/filter.svg");
+  // &:hover {
+  //     background-image: url("../../assets/images/dotsWhite.svg");
+  // }
+}
+
+.buttonActive {
+  @include button();
+  background-color: $bg-color-hover;
+  position: relative;
+}
+
+.drop {
+  background-color: white;
+  position: absolute;
+  top: 65%;
+  right: 40%;
+  border-radius: $border-radius;
+  width: 10rem;
+  // height: 5rem;
+  
+}
+
+.dropItem {
+  // width: 230px;
+  // margin-bottom: .5rem 0;
+  padding: .7rem;
+  cursor: pointer;
+  text-align: start;
+  height: min-content;
+  // border-radius: $border-radius;
+  &:hover {
+    background-color: $bg-color-light;
+  }
+  &:first-child {
+    margin-top: 0.5rem;
+  }
+  &:last-child {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.nav {
+  max-width: 366px;
+  width: 100%;
+}
+
+.container {
+  @include container();
+  @include flexCenter();
+}
+
+.wrapper {
+  @include flexCenter();
+  width: 100%;
+}
+
+.inputWrapper {
+  @include flexCenter();
+  justify-content: space-between;
+  margin: 0 10px;
+  width: 80%;
+}
+
+.inputContainer {
+    @include flexCenter();
+}
+
+.inputContainerActive {
+    @include flexCenter();
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid #CDCDCD;
+    justify-content: flex-start;
+}
+
+.input {
+//   min-width: 234px;
+  line-height: 20px;
+  border: none;
+  margin-left: 8px;
+  background-color: white;
+  &:focus {
+    outline: none;
+  }
+}
+
+.buttonSearch {
+  @include button();
+}

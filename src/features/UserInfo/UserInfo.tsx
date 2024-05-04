@@ -3,7 +3,8 @@ import { userAge, userName, userSex } from "../../utils/config";
 import userImage from "../../assets/images/user.png"; // Import the image
 import dots from "../../assets/images/dots.svg";
 import dotsHover from "../../assets/images/dotsWhite.svg";
-import BtnIcon from "../../components/BtnIcon/BtnIcon";
+
+import DotBtn from "../../components/DotBtn/DotBtn";
 const styles = require("./UserInfo.scss"); // Import the styles
 
 export default function UserInfo() {
@@ -21,7 +22,7 @@ export default function UserInfo() {
           </p>
         </div>
       </div>
-      <BtnIcon  imgMain={dots} imgHover={dotsHover} alt="Три точки" handleClick={handleDots}/>
+      <DotBtn />
     </div>
   );
 }
