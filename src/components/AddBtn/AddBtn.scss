@@ -1,15 +1,28 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .button {
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
+  @include flexCenter();
+  color: $text-btn-normal;
+  cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .container {
-    border-radius: 50%;
-    border: 1px solid $text-btn-normal;
-    width: 26px;
-    height: 26px;
-    @include flexCenter();
+  border-radius: 50%;
+  border: 1px solid $text-btn-normal;
+  min-width: 26px;
+  height: 26px;
+  @include flexCenter();
+}
+
+.span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.71px;
+  margin-right: 0.5rem;
 }

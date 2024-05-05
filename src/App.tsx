@@ -5,6 +5,7 @@ import UserInfo from "./features/UserInfo/UserInfo";
 import NavBar from "./features/NavBar/NavBar";
 import { Route, Routes } from "react-router-dom";
 import AddBtn from "./components/AddBtn/AddBtn";
+import Notes from "./features/Notes/Notes";
 // import styles from "./App.scss";
 const styles = require("./App.scss");
 
@@ -19,12 +20,12 @@ const App: React.FC = () => {
           <div>
             <NavBar />
             <Routes>
-              <Route path="/" element={<div>Заметки</div>} />
+              <Route path="/" element={<Notes />} />
               <Route path="/consult" element={<div>Консультации</div>} />
               <Route path="/video" element={<div>Видео</div>} />
               <Route path="/events" element={<div>Мероприятия</div>} />
             </Routes>
-            <AddBtn />
+            
           </div>
         </section>
       </main>

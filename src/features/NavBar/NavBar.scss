@@ -1,27 +1,32 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 a {
-    text-decoration: none;
-    padding: 0 1rem;
-    border-left: 1px solid $text-grey-cd;
-    &:first-child {
-        border-left: none;
-    }
+  text-decoration: none;
+  padding: 0 1rem;
+  border-left: 1px solid $text-grey-cd;
+  &:first-child {
+    border-left: none;
+  }
+  &:hover {
+    color: $bg-color-hover;
+  }
 }
 
 .nav {
-    display: flex;
-
+  @include flexCenter();
+  justify-content: space-between;
+  margin: 0.8rem 0;
 }
 
 .link {
-    color: $text-btn-normal;
+  color: $text-btn-normal;
 }
 
 .linkActive {
-    color: $bg-color-hover;
+  color: $bg-color-hover;
 }
 
 .linkPending {
-    color: $bg-color-light;
+  color: $bg-color-light;
 }
