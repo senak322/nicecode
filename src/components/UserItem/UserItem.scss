@@ -1,0 +1,59 @@
+@import "../../styles/mixins";
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  box-shadow: $box-shadow-main;
+  //   border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.itemTg {
+  &::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: $bg-color-hover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.name {
+  font-size: 16px;
+  line-height: 20px;
+  color: $font-color-black;
+}
+
+.container {
+  @include flexCenter();
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 1rem;
+}
+
+.aciveUser {
+    background-color: $bg-color-grey;
+    box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255);
+}

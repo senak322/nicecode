@@ -6,6 +6,8 @@ import plusWhite from "../../assets/images/plusWhite.svg";
 import filter from "../../assets/images/filter.svg";
 import filterWhite from "../../assets/images/filterWhite.svg";
 import BtnIcon from "../../components/BtnIcon/BtnIcon";
+import { users } from "../../utils/config";
+import UserItem from "../../components/UserItem/UserItem";
 
 const styles = require("./UsersList.scss");
 
@@ -72,11 +74,15 @@ export default function UsersList() {
           )}
         </div>
       </div>
+      <div className={styles.counter}>
+        <p className={styles.usersCount}>213</p>
+        <button className={styles.addButton}>Выбрать</button>
+      </div>
 
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        {users.map((user) => {
+          return <UserItem  name={user.name} isTg={user.isTg} isWarning={user.isWarning} image={user.image}/>;
+        })}
       </ul>
     </section>
   );
