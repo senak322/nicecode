@@ -1,0 +1,38 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.item {
+  @include item();
+  align-items: center;
+}
+
+.image {
+  width: 82px;
+  height: 46px;
+  margin-right: 10px;
+}
+
+.title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 1rem;
+    color: $font-color-black;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+.statusContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    color: $font-color-black;
+    display: flex;
+    // text-align: center;
+}
