@@ -81,3 +81,14 @@
     opacity: 0.8;
   } 
 }
+
+.checkContainer {
+  @include flexCenter();
+  // justify-content: space-between;
+  // margin: 1rem 0;
+}
+
+.usersCountCheck {
+  background-color: $bg-color-hover;
+  margin-left: .5rem;
+}

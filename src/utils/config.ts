@@ -19,7 +19,7 @@ export interface IUser {
     isTg: boolean;
     isWarning: boolean;
     image: string;
-    
+    id?: number; 
 }
 
 export const userName = "Рожков Денис Петрович";
@@ -42,71 +42,83 @@ export const users: IUser[] = [
     isTg: true,
     isWarning: false,
     image: kravc,
+    id: 1,
   },
   {
     name: "Рожков Денис",
     isTg: false,
     isWarning: false,
     image: user,
+    id: 2,
   },
   {
     name: "Кравцова Александра",
     isTg: false,
     isWarning: true,
     image: kravc,
+    id: 3,
   },
   {
     name: "Диброва Алевтина",
     isTg: false,
     isWarning: false,
     image: dibrova,
+    id: 4,
   },
   {
     name: "Иванов Дмитрий",
     isTg: false,
     isWarning: false,
     image: ivanov,
+    id: 5,
   },
   {
     name: "nosikov@list.ru",
     isTg: false,
     isWarning: false,
     image: nosikov,
+    id: 6,
   },
   {
     name: "Форс Александр",
     isTg: false,
     isWarning: false,
     image: fors,
+    id: 7,
   },
   {
     name: "Ахмедов Артур",
     isTg: false,
     isWarning: false,
     image: ahmed,
+    id: 8,
   },
   {
     name: "Блажевич Игорь",
     isTg: false,
     isWarning: false,
     image: igor,
+    id: 9,
   },
   {
     name: "Валиева Руфина",
     isTg: false,
     isWarning: false,
     image: ruf,
+    id: 10,
   },
   {
     name: "Волошина Виктория",
     isTg: false,
     isWarning: false,
     image: volosh,
+    id: 11,
   },
   {
     name: "Волошина Виктория",
     isTg: false,
     isWarning: false,
     image: volosh,
+    id: 12,
   },
 ];
