@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://senak322.github.io/nicecode/notes",
+  "homepage": "http://senak322.github.io/nicecode/",
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --mode production",
