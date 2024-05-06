@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";  
+
+.item {
+  display: flex;
+  border-radius: $border-radius;
+  border: 1px solid $text-grey-cd;
+  padding: .5rem;
+  cursor: pointer;
+  align-items: center;
+  &:hover {
+    border-color: $bg-color-hover;
+  }
+  margin-bottom: .5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.imgContainer {
+  @include flexCenter();
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $bg-color-light;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.itemСlicked {
+    border-color: $bg-color-hover;
+}
+
+.imgContainerСlicked {
+    background-color: $bg-color-hover;
+}
+
+.consType {
+    color: $font-color-black;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 1rem;
+}
+
+.consDate {
+    color: $text-btn-normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.approved {
+    color: #FF0000;
+    font-size: 14px;
+    line-height: 20px;
+    align-self: flex-end;
+}
+
+.container {
+    width: 95%;
+}
+
+.dateContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}

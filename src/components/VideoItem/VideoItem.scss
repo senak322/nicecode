@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.item {
+    @include item()
+}
+
+.container {
+  width: 95%;
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+  width: 82px;
+  height: 46px;
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 1rem;
+  color: $font-color-black;
+}
+
+.autor {
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-btn-normal;
+}
